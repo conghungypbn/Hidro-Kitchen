@@ -1,0 +1,62 @@
+<template name = "InsertDish">
+	<div class="container">
+		<form id="form-insertDish" class="col-md-20" role="form">
+			<h2>Thêm mon an</h2>
+
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			<br>
+			<div class="form-group">
+				<br>
+				<div class="input-div">
+	      			<label class="control-label col-md-2" for="name">Ten mon an :</label>
+	      			<div class="col-md-10">
+	        			<input type="text" class="form-control" id="name" placeholder="">
+	      			</div>
+				</div>
+			</div>
+
+			<br>
+			<div class="form-group">
+				<br>
+      			<label class="control-label col-sm-2" for="cost">Gia mon an:</label>
+      			<div class="col-sm-10">
+        			<input type="text" class="form-control" id="cost" placeholder="">
+      			</div>
+    		</div>
+
+    		<br>
+    		
+    		<h4>Thanh phan: </h4>
+    		<br>
+			<div class="form-group">
+      			<label class="control-label col-sm-2" for="pwd">
+      				<input type="text" class="form-control" id="pwd">
+      			</label>
+      			<div class="col-sm-10">          
+        			<input type="text" class="form-control" id="pwd" placeholder="">
+      			</div>
+			</div>
+
+
+			<div id = "component">
+			</div>
+
+			<br><br>
+			<div>
+				<label class = "control-label col-sm-2" for= "pwd">
+					<button  id = "addElement" type="button" class="btn">+</button>
+				</label>
+			</div>
+
+			<br><br>
+			<button id = "add" class="btn btn-primary btn-block" type="submit" data-loading-text="Please wait...">
+				Thêm
+			</button>
+		</form>
+	</div>
+</template>
