@@ -1,0 +1,75 @@
+<template name = "ManageMenu">
+	<div class = "container">
+		<div>
+			<p class = "h2 col-sm-4">Quản lý thực đơn ngày: </p>
+			<div class = "col-sm-4">
+				<label for="date">
+				</label>
+				<input class="form-control" id="date" type="date" value= {{getToday}}>
+			</div>
+			<div class = "col-sm-2">
+				<label for = "show">
+				</label>
+				<button type = "button" id = "show" class = "btn btn-success form-control">Show</button>
+			</div>
+			<div class = "col-sm-2">
+				<label for = "save">
+
+				</label>
+				<button type="button" id="save" class="btn btn-success form-control ">Save</button>
+			</div>
+				
+			<br><br><br>
+			<hr>
+			<div>
+				<h3>Danh sách các món đã chọn: </h3>
+				{{>dishChosen}}
+			</div>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<div>
+				<hr>
+				<h3>Nhà bếp có: </h3>
+				{{>alldish}}
+			</div>
+			
+		</div>
+	</div>
+</template>
+<template name = "alldish">
+	{{#each alldish}}
+      {{> edish}}
+    {{/each}}
+    
+	<div class = "col-sm-2">
+		<label for = "save">
+
+		</label>
+		<button type="button" id="save2" class="btn btn-success form-control ">Save</button>
+	</div>
+</template>
+
+<template name = "edish">
+	<div class = "col-sm-4 hdish">
+		<img src="images/images.jpg">
+		<input class="hcheckbox check" id="xx" type="checkbox" value="hh" name="category"/>
+		<p class = "h3">{{name}}</p>
+	    <p class = "h3">{{cost}}</p>
+        
+	</div>
+
+</template>
+
+<template name = "dishChosen">
+	{{#each dishChosentemp}}
+      {{> edishChosen}}
+    {{/each}}
+</template>
+
+<template name = "edishChosen">
+	<div class = "col-sm-4 hdish">
+		<img src="images/images.jpg">
+		<input class="hcheckbox check" type="checkbox" value="hh" name="category" checked = "checked"/>
+		<p class = "h3">{{name}}</p>
+	    <p class = "h3">{{cost}}</p>
+	</div>
+</template>

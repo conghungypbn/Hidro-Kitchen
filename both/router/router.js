@@ -9,7 +9,7 @@ Router.configure({
 if(Meteor.isClient) {
 	var publicRoutes = ["home_public", "login", "register", "forgot_password", "reset_password"];
 	var privateRoutes = ["home_private", "user_settings", "user_settings.profile", "user_settings.change_pass",
-						"logout", "addDish", "insertDish"];
+						"logout", "addDish", "manageMenu", "addDish.insert"];
 	var zonelessRoutes = [];
 
 	var roleMap = [
@@ -134,5 +134,6 @@ Router.map(function () {
 	this.route("logout", {path: "/logout", controller: "LogoutController"});
 	this.route("addDish", {path: "/themmonan", controller: "AddDishController"});
 	this.route("addDish.insert", {path: "/themthongtinmonan", controller: "InsertDishController"});
+	this.route("manageMenu", {path: "/quanlymenu", controller: "ManageMenuController"});
 	/*ROUTER_MAP*/
 });

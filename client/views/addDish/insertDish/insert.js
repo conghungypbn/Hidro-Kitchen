@@ -1,6 +1,9 @@
 var idNameComponent = "";
 var idQuantityComponent= "";
 var count = 0;
+var cmtCount = [];
+var components = [];
+
 Template.InsertDish.events({
 	"click #insertDish": function(e, t) {
 		e.preventDefault();
@@ -8,25 +11,34 @@ Template.InsertDish.events({
 	},
 	"click #addElement": function(e, t){
 		e.preventDefault();
-		count ++;
-		idNameComponent = "name"+ count;
-		idQuantityComponent = "quantity" + count;
-		var temp = "<br><br><div class='form-group'><label class='control-label col-sm-2' for="+idNameComponent+"><input type='text' class='form-control' id="+idNameComponent+"></label><div class='col-sm-10'><input type='text' class='form-control' id="+idQuantityComponent+" ></div></div>"
-    	document.getElementById("component").innerHTML += temp;
+		// alert("haha")
+		var ten = document.getElementById("tenthucpham").value;
+		var khoiluong = document.getElementById("khoiluongthanhphanmoi").value;
+		var donvi = document.getElementById("donvi").value;
+		if(ten != "" && khoiluong != "" && donvi != ""){
+			components[count] = [ten, khoiluong, donvi];
+			count++;
+			cmtCount[count] = 0;
+			var thanhphanmoi =
+			"<div style = 'border: 1px solid gray;height: 40px;' id='thanhphan"+ count + "'>"+
+				"<span class='tenthucpham col-md-2 h4' id = 'name'"+count+">"+ten+":</span>"+
+				"<span class='khoiluong col-md-1 h4' >"+khoiluong+"</span><p class = 'col-md-2 h4'>"+ donvi +
+				"</p><input class='fa fa-trash-o' type='button' value='X' onclick='javascript:xoathanhphan(" + count + ");'>"+
+			"</div><br>"
+			document.getElementById("khungnoidung").innerHTML = thanhphanmoi + document.getElementById("khungnoidung").innerHTML;
+			document.getElementById("tenthucpham").value = "";
+			document.getElementById("khoiluongthanhphanmoi").value = "";
+			document.getElementById("donvi").value = "";
+		}
 	},
 
 	"submit #form-insertDish": function(e, t) {
 		e.preventDefault();
 		var name = t.find('#name').value.trim();
 		var cost = t.find('#cost').value.trim();
-		var components;
-		for(var i =0; i<= count; i++){
-			var idname = "#name" +i;
-			var idquantity = "quantity" +i;
-			components[i][0] = t.find(idname).value.trim();
-			components[i][1] = t.find(idquantity).value.trim();
-		}
-		alert("fshg");
+		// alert(components);
+		// submit_button.button("loading");
+		Meteor.call('addDish', name, cost, components);
 	}
 
 });

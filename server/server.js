@@ -10,6 +10,14 @@ Meteor.startup(function() {
 });
 
 Meteor.methods({
+	"updateMenu" : function(dateInput, listDishInput){
+		ThucDon.insert({dateI : dateInput, listDish: listDishInput});
+		console.log("addMenu ok");
+	},
+	"addDish": function(nameInput, costInput, componentsInput){
+		MonAn.insert({name : nameInput, cost: costInput, components: componentsInput});
+		console.log("addDish ok");
+	},
 	"createUserAccount": function(options) {
 		if(!Users.isAdmin(Meteor.userId())) {
 			throw new Meteor.Error(403, "Access denied.");

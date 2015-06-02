@@ -20,3 +20,10 @@ Template.manageDish.events({
 		Router.go("addDish.insert", {});
 	},
 });
+
+
+Template.dishList.helpers({
+	 dishs: function(){
+      return MonAn.find({}, {sort: { name: 1, cost: -1}}).fetch();
+    }
+});
