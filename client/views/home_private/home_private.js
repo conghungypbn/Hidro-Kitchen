@@ -29,8 +29,8 @@ Template.calendar.helpers({
     meo1 : function(){
         return pageSession.get("meo1");
     },
-    meo : function(){
-        return pageSession.get("meo");
+    meo2 : function(){
+        return pageSession.get("meo2");
     },
     meo : function(){
         return pageSession.get("meo");
@@ -154,18 +154,18 @@ Template.calendar.helpers({
     },
 });
 Template.calendar.events({
-    'click #date2' : function(){
+    'click #date1' : function(){
         if(pageSession.get("meo1")== "haha"){
             pageSession.set("meo1", '');    
         }else{
             pageSession.set("meo1", "haha");
         }
     },
-    'click #date' : function(){
-        if(pageSession.get("meo")== "haha"){
-            pageSession.set("meo", '');    
+    'click #date2' : function(){
+        if(pageSession.get("meo2")== "haha"){
+            pageSession.set("meo2", '');    
         }else{
-            pageSession.set("meo", "haha");
+            pageSession.set("meo2", "haha");
         }
     },
     'click #date' : function(){
