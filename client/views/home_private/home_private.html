@@ -15,7 +15,17 @@
 </template>
 
 <template name = "calendar">
-  <div><button id = "premonth">«</button>{{getMonth}}<button id = "nextMonth" >»</button></div>
+    <div style = "width: 400px;margin: 20px auto">
+        <div style = "display: inline-block;background-color: #D0D0D0;">
+            <button class = "btn btn-md btn-warning" style = "margin: 0;" id = "premonth"> « </button>
+        </div>
+        <div style = "display: inline-block;background-color: #D0D0D0; padding: 0 10px 0 10px">
+            <h4>{{getMonth}}</h4>
+        </div>
+        <div style = "display: inline-block;background-color: #D0D0D0;">
+            <button class = "btn btn-md btn-warning" id = "nextMonth" > » </button>
+        </div>
+    </div>
   <table class = "table table-striped table-hover">
     <thead id="weekRow">
       <th>Sun</th>
@@ -29,13 +39,14 @@
     <tr id="row1">
       <td id="date1" class = "{{#if meo1}}{{meo1}}{{/if}}">{{getDay 1}}</td>
       <td id="date2" class = "{{#if meo2}}{{meo2}}{{/if}}">{{getDay 2}}</td>
-      <td id="date3">{{getDay 3}}</td>
-      <td id="date4">{{getDay 4}}</td>
-      <td id="date5">{{getDay 5}}</td>
-      <td id="date6">{{getDay 6}}</td>
-      <td id="date7">{{getDay 7}}</td>
+      <td id="date3" class = "{{#if meo3}}{{meo3}}{{/if}}">{{getDay 3}}</td> 
+      <td id="date4" class = "{{#if meo4}}{{meo4}}{{/if}}">{{getDay 4}}</td>
+      <td id="date5" class = "{{#if meo5}}{{meo5}}{{/if}}">{{getDay 5}}</td>
+      <td id="date6" class = "{{#if meo6}}{{meo6}}{{/if}}">{{getDay 6}}</td>
+      <td id="date7" class = "{{#if meo7}}{{meo7}}{{/if}}">{{getDay 7}}</td>
     </tr>
     <tr id="row2">
+      <!-- them  class = "{{#if meo2}}{{meo2}}{{/if}}" voi meo8 tuong ung voi so tren id-->
       <td id="date8">{{getDay 8}}</td>
       <td id="date9">{{getDay 9}}</td>
       <td id="date10">{{getDay 10}}</td>
