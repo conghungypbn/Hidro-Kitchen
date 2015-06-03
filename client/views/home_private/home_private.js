@@ -155,507 +155,549 @@ Template.calendar.helpers({
 });
 Template.calendar.events({
     'click #date1' : function(){
-        if(pageSession.get("meo1")== "haha"){
-            pageSession.set("meo1", '');
+        var dayIndex = 1;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 1-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo1", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date2' : function(){
-        if(pageSession.get("meo2")== "haha"){
-            pageSession.set("meo2", '');
+        var dayIndex = 2;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 2-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo2", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date3' : function(){
-        if(pageSession.get("meo3")== "haha"){
-            pageSession.set("meo3", '');
+        var dayIndex = 3;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo3", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
-    'click #date4' : function(){//chuyen date thanh date4
-        if(pageSession.get("meo4")== "haha"){// chuyen meo nay thanh meo4 va tuong tu voi cac cai duoi
-            pageSession.set("meo4", '');    // chuyen meo
+    'click #date4' : function(){
+        var dayIndex = 4;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 4-startDate+1;// chuyen so 3 thanh so 4 theo #date va tuong tu voi cai ben duoi
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo4", "haha");// chuyen meo
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date5' : function(){
-        if(pageSession.get("meo5")== "haha"){
-            pageSession.set("meo5", '');
+        var dayIndex = 5;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 5-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo5", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date6' : function(){
-        if(pageSession.get("meo6")== "haha"){
-            pageSession.set("meo6", '');
+        var dayIndex = 6;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 6-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo6", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date7' : function(){
-        if(pageSession.get("meo7")== "haha"){
-            pageSession.set("meo7", '');
+        var dayIndex = 7;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 7-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo7", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
-    'click #date8' : function(){//chuyen date thanh date8
-        if(pageSession.get("meo8")== "haha"){// chuyen meo nay thanh meo8 va tuong tu voi cac cai duoi
-            pageSession.set("meo8", '');    // chuyen meo
+    'click #date8' : function(){
+        var dayIndex = 8;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 4-startDate+1;// chuyen so 4 thanh so 8 theo #date va tuong tu voi cai ben duoi
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo8", "haha");// chuyen meo
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date9' : function(){
-        if(pageSession.get("meo9")== "haha"){
-            pageSession.set("meo9", '');
+        var dayIndex = 9;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo9", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date10' : function(){
-        if(pageSession.get("meo10")== "haha"){
-            pageSession.set("meo10", '');
+        var dayIndex = 10;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo10", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date11' : function(){
-        if(pageSession.get("meo11")== "haha"){
-            pageSession.set("meo11", '');
+        var dayIndex = 11;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo11", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date12' : function(){
-        if(pageSession.get("meo12")== "haha"){
-            pageSession.set("meo12", '');
+        var dayIndex = 12;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo12", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date13' : function(){
-        if(pageSession.get("meo13")== "haha"){
-            pageSession.set("meo13", '');
+        var dayIndex = 13;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo13", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date14' : function(){
-        if(pageSession.get("meo14")== "haha"){
-            pageSession.set("meo14", '');
+        var dayIndex = 14;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo14", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date15' : function(){
-        if(pageSession.get("meo15")== "haha"){
-            pageSession.set("meo15", '');
+        var dayIndex = 15;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo15", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date16' : function(){
-        if(pageSession.get("meo16")== "haha"){
-            pageSession.set("meo16", '');
+        var dayIndex = 16;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo16", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date17' : function(){
-        if(pageSession.get("meo17")== "haha"){
-            pageSession.set("meo17", '');
+        var dayIndex = 17;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo17", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date18' : function(){
-        if(pageSession.get("meo18")== "haha"){
-            pageSession.set("meo18", '');
+        var dayIndex = 18;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo18", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date19' : function(){
-        if(pageSession.get("meo19")== "haha"){
-            pageSession.set("meo19", '');
+        var dayIndex = 19;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo19", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date20' : function(){
-        if(pageSession.get("meo20")== "haha"){
-            pageSession.set("meo20", '');
+        var dayIndex = 20;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo20", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date21' : function(){
-        if(pageSession.get("meo21")== "haha"){
-            pageSession.set("meo21", '');
+        var dayIndex = 21;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo21", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date22' : function(){
-        if(pageSession.get("meo22")== "haha"){
-            pageSession.set("meo22", '');
+        var dayIndex = 22;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo22", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date23' : function(){
-        if(pageSession.get("meo23")== "haha"){
-            pageSession.set("meo23", '');
+        var dayIndex = 23;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo23", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date24' : function(){
-        if(pageSession.get("meo24")== "haha"){
-            pageSession.set("meo24", '');
+        var dayIndex = 24;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo24", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date25' : function(){
-        if(pageSession.get("meo25")== "haha"){
-            pageSession.set("meo25", '');
+        var dayIndex = 25;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo25", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date26' : function(){
-        if(pageSession.get("meo26")== "haha"){
-            pageSession.set("meo26", '');
+        var dayIndex = 26;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo26", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date27' : function(){
-        if(pageSession.get("meo27")== "haha"){
-            pageSession.set("meo27", '');
+        var dayIndex = 27;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo27", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date28' : function(){
-        if(pageSession.get("meo28")== "haha"){
-            pageSession.set("meo28", '');
+        var dayIndex = 28;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo28", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date29' : function(){
-        if(pageSession.get("meo29")== "haha"){
-            pageSession.set("meo29", '');
+        var dayIndex = 29;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo29", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date30' : function(){
-        if(pageSession.get("meo30")== "haha"){
-            pageSession.set("meo30", '');
+        var dayIndex = 30;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo30", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date31' : function(){
-        if(pageSession.get("meo31")== "haha"){
-            pageSession.set("meo31", '');
+        var dayIndex = 31;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo31", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date32' : function(){
-        if(pageSession.get("meo32")== "haha"){
-            pageSession.set("meo32", '');
+        var dayIndex = 32;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo32", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date33' : function(){
-        if(pageSession.get("meo33")== "haha"){
-            pageSession.set("meo33", '');
+        var dayIndex = 33;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo33", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date34' : function(){
-        if(pageSession.get("meo34")== "haha"){
-            pageSession.set("meo34", '');
+        var dayIndex = 34;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo34", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date35' : function(){
-        if(pageSession.get("meo35")== "haha"){
-            pageSession.set("meo35", '');
+        var dayIndex = 35;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo35", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date36' : function(){
-        if(pageSession.get("meo36")== "haha"){
-            pageSession.set("meo36", '');
+        var dayIndex = 36;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo36", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date37' : function(){
-        if(pageSession.get("meo37")== "haha"){
-            pageSession.set("meo37", '');
+        var dayIndex = 37;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo37", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date38' : function(){
-        if(pageSession.get("meo38")== "haha"){
-            pageSession.set("meo38", '');
+        var dayIndex = 38;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo38", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date39' : function(){
-        if(pageSession.get("meo39")== "haha"){
-            pageSession.set("meo39", '');
+        var dayIndex = 39;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo39", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date40' : function(){
-        if(pageSession.get("meo40")== "haha"){
-            pageSession.set("meo40", '');
+        var dayIndex = 40;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo40", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date41' : function(){
-        if(pageSession.get("meo41")== "haha"){
-            pageSession.set("meo41", '');
+        var dayIndex = 41;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-            pageSession.set("meo41", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     },
     'click #date42' : function(){
-        if(pageSession.get("meo42")== "haha"){
-            pageSession.set("meo42", '');
+        var dayIndex = 42;
+        if(pageSession.get("meo" + dayIndex)== "haha"){
+            pageSession.set("meo" + dayIndex, '');
         }else{
             var startDate = new Date(year+"/"+month+"/" +1).getDay() + 1;
             var numOfDay = new Date(year,month,0).getDate();
-            var day = 3-startDate+1;
+            var day = dayIndex-startDate+1;
             var checkday= (day>0 && day<=numOfDay)?day:0;
             if(checkday!=0)
-               pageSession.set("meo42", "haha");
+            pageSession.set("meo" + dayIndex, "haha");
         }
     }
 });
